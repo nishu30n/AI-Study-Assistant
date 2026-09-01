@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Dashboard | AI Study Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+    <script>
+    const loggedInUser =
+        localStorage.getItem("loggedInUser");
+
+    if ( !loggedInUser) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         DASHBOARD HEADER
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🤖 AI Study Assistant
+            </div>
+
+
+           <div class="nav-links">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <button onclick="window.location.href='profile.html'">
+        Profile
+    </button>
+
+    <button id="logoutButton" type="button">
+        Logout 🚪
+    </button>
+
+    </div>
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main class="dashboard">
+
+
+        <!-- Dashboard Heading -->
+
+        <div class="dashboard-heading">
+
+            <p class="tagline">
+                Your Learning Dashboard
+            </p>
+
+            <h1 id="dashboardWelcome">
+                Welcome back! 👋
+            </h1>
+
+            <p>
+                Let's continue your learning journey.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             QUIZ STATISTICS
+        ========================== -->
+
+        <div class="dashboard-stats">
+
+
+            <!-- Total Quizzes -->
+
+            <div class="stat-card">
+
+                <span>
+                    📚
+                </span>
+
+                <h3 id="totalQuizzes">
+                    0
+                </h3>
+
+                <p>
+                    Total Quizzes
+                </p>
+
+            </div>
+
+
+
+            <!-- Questions Solved -->
+
+            <div class="stat-card">
+
+                <span>
+                    📝
+                </span>
+
+                <h3 id="questionsSolved">
+                    0
+                </h3>
+
+                <p>
+                    Questions Solved
+                </p>
+
+            </div>
+
+
+
+            <!-- Quiz Accuracy -->
+
+            <div class="stat-card">
+
+                <span>
+                    🎯
+                </span>
+
+                <h3 id="quizAccuracy">
+                    0%
+                </h3>
+
+                <p>
+                    Quiz Accuracy
+                </p>
+
+            </div>
+
+
+
+            <!-- Average Score -->
+
+            <div class="stat-card">
+
+                <span>
+                    🏆
+                </span>
+
+                <h3 id="averageScore">
+                    0%
+                </h3>
+
+                <p>
+                    Average Score
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             AI TOOLS
+        ========================== -->
+
+        <section class="dashboard-tools">
+
+
+            <h2>
+                What do you want to study today?
+            </h2>
+
+
+            <div class="tool-container">
+
+
+                <!-- Doubt Solver -->
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Smart Doubt Solver
+                    </h3>
+
+                    <p>
+                        Ask questions and get
+                        step-by-step explanations.
+                    </p>
+
+                    <button
+                        onclick="window.location.href='doubt-solver.html'"
+                    >
+                        Ask a Doubt
+                    </button>
+
+                </div>
+
+
+
+                <!-- AI Notes -->
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        AI Notes
+                    </h3>
+
+                    <p>
+                        Generate simple and useful
+                        study notes.
+                    </p>
+
+                    <button
+                        onclick="window.location.href='ai-notes.html'"
+                    >
+                        Create Notes
+                    </button>
+
+                </div>
+
+
+
+                <!-- AI Quiz -->
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        ❓
+                    </div>
+
+                    <h3>
+                        AI Quiz
+                    </h3>
+
+                    <p>
+                        Test your knowledge with
+                        AI-generated quizzes.
+                    </p>
+
+                    <button
+                        onclick="window.location.href='ai-quiz.html'"
+                    >
+                        Start Quiz
+                    </button>
+
+                </div>
+
+
+
+                <!-- Study Planner -->
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Study Planner
+                    </h3>
+
+                    <p>
+                        Create a personalized
+                        study plan.
+                    </p>
+
+                    <button
+                        onclick="window.location.href='study-planner.html'"
+                    >
+                        View Plan
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUIZ PROGRESS
+        ========================== -->
+
+        <section class="quiz-progress">
+
+            <div class="progress-header">
+
+                <h2>
+                    📈 Quiz Progress
+                </h2>
+
+                <p>
+                    Your performance across recent quizzes
+                </p>
+
+            </div>
+
+            <div class="progress-chart-container">
+
+                <canvas id="quizProgressChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PERFORMANCE HIGHLIGHTS
+        ========================== -->
+
+        <section class="performance-highlights">
+
+            <div class="highlight-card">
+
+                <span class="highlight-icon">
+                    🏆
+                </span>
+
+                <div>
+
+                    <p>
+                        Best Score
+                    </p>
+
+                    <h3 id="bestScore">
+                        0%
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECENT QUIZ ACTIVITY
+        ========================== -->
+
+        <section class="recent-quizzes">
+
+            <div class="recent-quizzes-header">
+
+                <div>
+
+                    <h2>
+                        🕐 Recent Quiz Activity
+                    </h2>
+
+                    <p>
+                        Your latest quiz performance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="recentQuizList">
+
+                <p class="no-recent-quizzes">
+                    No quizzes completed yet.
+                </p>
+
+            </div>
+
+        </section>
+        <!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
+<section class="achievements-section">
+
+    <div class="achievements-header">
+
+        <h2>
+            🏅 Achievements
+        </h2>
+
+        <p>
+            Keep learning and unlock new achievements!
+        </p>
+
+    </div>
+
+    <div id="achievementsList">
+    </div>
+
+</section>
+
+
+
+        <!-- =========================
+             TODAY'S GOAL
+        ========================== -->
+
+        <section class="today-goal">
+
+            <h2>
+                🎯 Today's Study Goal
+            </h2>
+
+            <p>
+                Complete your first study session
+                to start tracking your progress.
+            </p>
+
+            <button
+                onclick="window.location.href='study-planner.html'"
+            >
+                Start Studying 🚀
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Study Assistant |
+            Learn Smarter 🚀
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         DASHBOARD JAVASCRIPT
+    ========================== -->
+
+    <script src="dashboard.js"></script>
+    <script>
+    const logoutButton =
+        document.getElementById("logoutButton");
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener("click", function () {
+
+            localStorage.removeItem("loggedInUser");
+           
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+</script>
+</body>
+
+</html>

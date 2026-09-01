@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Study Planner | AI Study Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🤖 AI Study Assistant
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         STUDY PLANNER
+    ========================== -->
+
+    <main class="planner-page">
+
+
+        <!-- Heading -->
+
+        <div class="planner-heading">
+
+            <p class="tagline">
+                📅 Smart Study Planner
+            </p>
+
+            <h1>
+                Plan Your Study Smarter.
+            </h1>
+
+            <p>
+                Create a personalized study plan
+                and stay consistent with your goals.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             PLANNER FORM
+        ========================== -->
+
+        <div class="planner-box">
+
+            <label for="subject">
+                Subject / Topic
+            </label>
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Example: Java, DBMS, Mathematics..."
+            >
+
+
+            <label for="studyHours">
+                Daily Study Hours
+            </label>
+
+            <input
+                type="number"
+                id="studyHours"
+                placeholder="Example: 2"
+                min="1"
+                max="24"
+            >
+
+
+            <label for="targetDate">
+                Target / Exam Date
+            </label>
+
+            <input
+                type="date"
+                id="targetDate"
+            >
+
+
+            <label for="priority">
+                Priority
+            </label>
+
+            <select id="priority">
+
+                <option value="low">
+                    Low
+                </option>
+
+                <option
+                    value="medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+                <option value="high">
+                    High
+                </option>
+
+            </select>
+
+
+            <div class="planner-buttons">
+
+                <button
+                    type="button"
+                    id="addPlanButton"
+                >
+                    ➕ Add to Plan
+                </button>
+
+                <button
+                    type="button"
+                    id="clearPlanButton"
+                >
+                    Clear Plan
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             STUDY PLAN
+        ========================== -->
+
+        <section class="study-plan-section">
+
+            <div class="study-plan-header">
+
+                <div>
+
+                    <h2>
+                        📚 Your Study Plan
+                    </h2>
+
+                    <p>
+                        Your planned subjects will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="studyPlanList">
+
+                <p class="no-plan">
+                    No study plan created yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Study Assistant |
+            Learn Smarter 🚀
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="study-planner.js"></script>
+
+</body>
+
+</html>

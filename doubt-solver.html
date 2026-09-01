@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Doubt Solver | AI Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                🤖 AI Study Assistant
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Doubt Solver -->
+
+    <main class="doubt-page">
+
+        <div class="doubt-heading">
+
+            <p class="tagline">
+                🧠 AI Doubt Solver
+            </p>
+
+            <h1>
+                Ask Anything. Understand Everything.
+            </h1>
+
+            <p>
+                Ask your study question and get a simple,
+                step-by-step explanation.
+            </p>
+
+        </div>
+
+
+        <!-- Question Box -->
+
+<div class="question-box">
+
+    <label for="question">
+        What are you confused about?
+    </label>
+
+    <textarea
+        id="question"
+        placeholder="Example: Explain photosynthesis in simple words..."
+    ></textarea>
+
+    <div class="doubt-buttons">
+        <button id="askButton">
+            Ask AI 🤖
+        </button>
+
+        <button id="clearButton" type="button">
+            Clear 🗑️
+        </button>
+    </div>
+
+</div>
+
+
+<!-- AI Response -->
+
+<!-- AI Response -->
+
+<div class="answer-box">
+
+    <div class="answer-header">
+        <span>🤖</span>
+        <h2>AI Explanation</h2>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>AI is thinking...</p>
+    </div>
+
+    <div id="answer">
+        Your AI explanation will appear here.
+    </div>
+
+    <!-- AI Action Buttons -->
+    <div class="answer-actions">
+
+        <button id="copyAnswerButton" type="button">
+            📋 Copy Answer
+        </button>
+
+        <button id="simpleAnswerButton" type="button">
+            💡 Explain Simply
+        </button>
+
+        <button id="hintButton" type="button">
+            🧩 Give Me a Hint
+        </button>
+
+        <button id="regenerateButton" type="button">
+            🔄 Regenerate
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Question History -->
+
+<div class="history-box">
+
+    <div class="history-header">
+        <h2>📚 Question History</h2>
+
+        <button id="clearHistoryButton" type="button">
+            Clear History
+        </button>
+    </div>
+
+    <div id="historyList">
+        <p>No questions asked yet.</p>
+    </div>
+
+</div>
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 AI Study Assistant | Learn Smarter 🚀
+        </p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

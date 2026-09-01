@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Quiz | AI Study Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🤖 AI Study Assistant
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="doubt-solver.html">
+                    Doubt Solver
+                </a>
+
+                <a href="ai-notes.html">
+                    AI Notes
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         AI QUIZ PAGE
+    ========================== -->
+
+    <main class="quiz-page">
+
+        <div class="quiz-heading">
+
+            <p class="tagline">
+                🎯 AI Quiz Generator
+            </p>
+
+            <h1>
+                Test Your Knowledge.
+            </h1>
+
+            <p>
+                Enter a topic and let AI create an
+                interactive quiz for you.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             QUIZ SETUP
+        ========================== -->
+
+        <div class="quiz-box">
+
+            <!-- Topic -->
+
+            <label for="quizTopic">
+                What topic do you want to practice?
+            </label>
+
+            <div class="topic-input-wrapper">
+
+    <textarea
+        id="quizTopic"
+        placeholder="Example: Java, DBMS, Operating System..."
+    ></textarea>
+
+    <button
+        type="button"
+        id="clearTopicButton"
+        class="clear-topic-button"
+    >
+        Clear
+    </button>
+
+</div>
+
+            <!-- Level -->
+
+            <label for="quizDifficulty">
+                Select Level
+            </label>
+
+            <select id="quizDifficulty">
+
+                <option value="easy">
+                    Easy
+                </option>
+
+                <option
+                    value="medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+                <option value="hard">
+                    Hard
+                </option>
+
+            </select>
+            <label for="quizQuestionCount">
+    Number of Questions
+</label>
+
+<select id="quizQuestionCount">
+
+    <option value="10" selected>
+        10 Questions
+    </option>
+
+    <option value="15">
+        15 Questions
+    </option>
+
+    <option value="20">
+        20 Questions
+    </option>
+
+</select>
+
+
+            <!-- Generate Quiz -->
+
+            <button
+                id="generateQuizButton"
+                type="button"
+            >
+                Generate Quiz 🤖
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             LOADING
+        ========================== -->
+
+        <div
+            id="quizLoading"
+            class="quiz-loading hidden"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <p>
+                Creating your quiz...
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             QUIZ AREA
+        ========================== -->
+
+        <div
+            id="quizContainer"
+            class="quiz-container"
+        ></div>
+
+
+        <!-- =========================
+             RESULT
+        ========================== -->
+
+        <div
+            id="quizResult"
+            class="quiz-result hidden"
+        >
+
+            <h2>
+                🏆 Quiz Result
+            </h2>
+
+            <p id="scoreText"></p>
+
+            <button
+                id="retryButton"
+                type="button"
+            >
+                Try Again 🔄
+            </button>
+            <button
+    id="practiceWeakTopicButton"
+    type="button"
+    class="practice-weak-topic-button"
+>
+    🎯 Practice Weak Topic
+</button>
+
+        </div>
+
+
+        <!-- =========================
+             QUIZ HISTORY
+        ========================== -->
+
+        <div class="quiz-history">
+
+            <div class="quiz-history-header">
+
+                <h2>
+                    📚 Quiz History
+                </h2>
+
+                <button
+                    id="clearQuizHistoryButton"
+                    type="button"
+                >
+                    Clear History
+                </button>
+
+            </div>
+
+
+            <div id="quizHistoryList">
+
+                <p>
+                    No quizzes completed yet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Study Assistant |
+            Learn Smarter 🚀
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>
