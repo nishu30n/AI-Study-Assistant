@@ -287,7 +287,7 @@ async function askAI(
 
         const response =
             await fetch(
-                "http://localhost:5000/api/ask",
+                " https://ai-study-assistant-n7nm.onrender.com",
                 {
 
                     method:
