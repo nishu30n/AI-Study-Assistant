@@ -287,7 +287,7 @@ async function askAI(
 
         const response =
             await fetch(
-                " https://ai-study-assistant-n7nm.onrender.com",
+                " https://ai-study-assistant-n7nm.onrender.com/api/ask",
                 {
 
                     method:
