@@ -843,7 +843,7 @@ Make the notes well-organized and visually easy to study.
 
         const response =
             await fetch(
-                 "https://ai-study-assistant-n7nm.onrender.com",
+                 "https://ai-study-assistant-n7nm.onrender.com/api/ask",
                 {
 
                     method:

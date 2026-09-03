@@ -478,7 +478,7 @@ Do not include any text outside the JSON.
 
         const response =
             await fetch(
-                " https://ai-study-assistant-n7nm.onrender.com",
+                " https://ai-study-assistant-n7nm.onrender.com/api/ask",
                 {
                     method: "POST",
 
