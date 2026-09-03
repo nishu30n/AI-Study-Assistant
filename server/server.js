@@ -59,7 +59,7 @@ app.post("/api/ask", async (req, res) => {
         // GEMINI REQUEST
         // ================================
         const response = await ai.models.generateContent({
-            model: "gemini-3.6-flash",
+            model: "gemini-3.5-flash",
             contents: questionText
         });
 
